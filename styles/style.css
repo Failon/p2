@@ -29,6 +29,9 @@ header{
 	flex-direction: row;
 	align-items: flex-end;
 }
+#header-wrap-1{
+	flex: 1;
+}
 h1{
 	font-size: 4em;
 	color: #2980b9;
@@ -37,7 +40,15 @@ h1{
 	margin-bottom: 0px;
 
 }
-
+#hamburger{
+	display: none;
+}
+#hamburger:hover{
+	cursor: pointer;
+}
+#contract-mobile{
+	display: none;
+}
 #navegador{
 	list-style: none;
 	display: flex;
@@ -50,7 +61,9 @@ h1{
 	margin-right: 10px;
 	margin-bottom: 0px;
 }
-
+#navegador > li:hover{
+	cursor: pointer;
+}
 #wrapper{
 
 	position: relative;
@@ -67,6 +80,10 @@ h1{
 	object-fit: contain;
 	object-position: 0px -150px;
 	-webkit-filter: grayscale(1);	
+}
+
+#newyork{
+	display: none;
 }
 
 #wrapper > span {
@@ -121,6 +138,9 @@ h1{
 #news > article > img{
 	width: 20%;
 }
+#news > article > img:hover{
+	cursor: pointer;
+}
 #news > article:nth-child(2) > img{
 	width: 30%;
 }
@@ -128,3 +148,128 @@ h1{
 #news > article > img:hover{
 	-webkit-animation: shakeit 0.6s linear infinite;
 }
+@media only screen and (max-width: 1024px){
+	#news p{
+		font-size: 0.9em;
+	}
+}
+
+@media only screen and (max-width: 768px){
+	h1{
+		font-size: 3em;
+	}
+
+	#navegador{
+		font-size: 1.5em;
+	}
+
+	#wrapper, #wrapper span{
+		height: 300px;
+	}
+
+	#video{
+		object-position: 0px -50px;
+	}
+	
+	#news p{
+		font-size: 0.8em;
+	}
+
+	#news h2{
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (max-width: 360px){
+	header{
+		flex-direction: column;
+		justify-content: center;
+	}
+	#header-wrap-1{
+		display: flex;
+		width: 100%;
+		height: 50px;
+		align-items: flex-end;
+	}
+	#header-wrap-2{
+		display: flex;
+		width: 100%;
+		align-items: center;
+	}
+
+	h1{
+		font-size: 2em;
+		text-align: center;
+	}
+	#hamburger{
+		display: block;
+		width: 10%;
+	}
+	#contract-mobile{
+		display: flex;
+		flex: 1 auto;
+		order: 2;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		height: 150px;
+		background-color: #2980b9;
+		-webkit-clip-path: polygon(12% 91%, 42% 84%, 80% 70%, 86% 44%, 72% 23%, 34% 25%, 17% 50%, 16% 70%, 25% 84%);
+	}
+	#navegador{
+		display: flex;
+		flex-direction: column;
+		font-size: 1.3em;
+		padding-left: 0px;
+		flex: 1 auto;
+		order: 1;
+		margin-bottom: 0px;
+	}
+
+	#navegador li{
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+	#wrapper{
+		height: 200px;
+		margin-top: 20px;
+	}
+	#wrapper span{
+		height: 200px;
+		align-items: flex-start;
+	}
+	#video{
+		display: none;
+	}
+	#newyork{
+		display: block;
+		-webkit-filter: grayscale(1);
+		object-fit: contain;
+		object-position: 0px -250px;
+	}
+	#contract{
+		display: none;
+		height: 20px;
+		font-size: 1em;
+		width: 100%;
+	}
+
+	#news{
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#news p{
+		display: none;
+	}
+	#news article{
+		margin: 15px;
+	}
+	#news h2{
+		margin: 0px;
+		font-size: 1.5em;
+	}
+}
+
+
+
